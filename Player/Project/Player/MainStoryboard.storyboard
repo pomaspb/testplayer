@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hXv-bk-wWW">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="GOa-wq-DfP">
+            <objects>
+                <viewController id="hXv-bk-wWW" customClass="MainViewController" customModule="Player" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Sf-OD-3Rj"/>
+                        <viewControllerLayoutGuide type="bottom" id="9kp-LT-VGg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MFg-G4-VEN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLq-nE-MuX">
+                                <rect key="frame" x="140" y="212" width="320" height="176"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="176" id="3ZE-qp-hOb"/>
+                                    <constraint firstAttribute="width" constant="320" id="Tvz-Fw-7dr"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="H63-2D-SIn" appends="YES" id="JQI-vw-M9a"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8T-Vh-B3X">
+                                <rect key="frame" x="285" y="428" width="30" height="30"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="hXv-bk-wWW" eventType="touchDown" id="1em-Jm-bz5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Video Player" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCa-NN-Wrd">
+                                <rect key="frame" x="234" y="151" width="132" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PLq-nE-MuX" firstAttribute="top" secondItem="TCa-NN-Wrd" secondAttribute="bottom" constant="40" id="5Rb-pq-UfN"/>
+                            <constraint firstAttribute="centerX" secondItem="PLq-nE-MuX" secondAttribute="centerX" id="BK1-Jz-kx5"/>
+                            <constraint firstItem="f8T-Vh-B3X" firstAttribute="top" secondItem="PLq-nE-MuX" secondAttribute="bottom" constant="40" id="DxP-AB-jPL"/>
+                            <constraint firstAttribute="centerX" secondItem="TCa-NN-Wrd" secondAttribute="centerX" id="HH2-cf-sqm"/>
+                            <constraint firstAttribute="centerX" secondItem="TCa-NN-Wrd" secondAttribute="centerX" id="R6l-hB-jQU"/>
+                            <constraint firstAttribute="centerY" secondItem="PLq-nE-MuX" secondAttribute="centerY" id="sOv-Xd-IKh"/>
+                            <constraint firstAttribute="centerX" secondItem="f8T-Vh-B3X" secondAttribute="centerX" id="vg3-cF-djq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="childView" destination="PLq-nE-MuX" id="pMa-Bu-iSi"/>
+                        <outlet property="playPauseButton" destination="f8T-Vh-B3X" id="xeQ-FP-q1B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qG6-zm-ZZz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="H63-2D-SIn">
+                    <connections>
+                        <action selector="handleTapGesture:" destination="hXv-bk-wWW" id="0Tc-ib-R3e"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="444" y="406"/>
+        </scene>
+    </scenes>
+</document>
